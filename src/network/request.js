@@ -32,3 +32,9 @@ export function request(config) {
   // 3.发送真正的网络请求,返回promise对象
   return instance(config)
 }
+
+
+
+
+
+

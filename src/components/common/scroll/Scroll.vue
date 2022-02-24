@@ -15,7 +15,6 @@ export default {
       type:Number,
       default:0
     },
-    // 1月21注释
     pullUpLoad: {
       type:Boolean,
       default:false
@@ -42,7 +41,6 @@ export default {
         this.$emit('scroll', position)
       })
     }
-    // 1月21注释
     //3.监听scroll滑动到底部
     if(this.pullUpLoad) {
       this.scroll.on('pullingUp', () => {
@@ -57,11 +55,14 @@ export default {
       this.scroll && this.scroll.scrollTo(x, y, time)
     },
     finishPullUp() {
-      this.scroll.finishPullUp()
+      this.scroll && this.scroll.finishPullUp()
     },
     refresh() {
       // console.log('***');
       this.scroll && this.scroll.refresh()
+    },
+    getScrollY() {
+      return this.scroll ? this.scroll.y : 0
     }
   },
 }
