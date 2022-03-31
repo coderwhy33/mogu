@@ -1,8 +1,8 @@
 <template>
 <div class="cart-list">
-  <ul>
+  <!-- <ul>
     <li v-for="(item, index) in $store.state.cartList" :key="index">{{item}}</li>
-  </ul>
+  </ul> -->
   <scroll class="content" ref="scroll">
     <cart-list-item 
       v-for="(item, index) in cartList" 

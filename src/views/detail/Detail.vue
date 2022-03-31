@@ -6,7 +6,6 @@
           ref="scroll" 
           @scroll="contentScroll"
           :probe-type="3">
-    
     <detail-swiper :top-images='topImages'/>
     <detail-base-info :goods="goods"/>
     <detail-shop-info :shop="shop"/>

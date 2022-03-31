@@ -12,7 +12,8 @@
             :probe-type="3" 
             @scroll="contentScroll"
             :pull-up-load="true"
-            @pullingUp="loadMore">
+            @pullingUp="loadMore"
+            >
       <home-swiper :banners='banners' @swiperImageLoad='swiperImageLoad'/>
       <recommend-view :recommends="recommends"/>
       <feature-view/>
@@ -84,6 +85,7 @@ export default {
     this.getHomeGoods('pop')
     this.getHomeGoods('new')
     this.getHomeGoods('sell')
+    // this.$refs.scroll.refresh()
   },
   activated() {
     this.$refs.scroll.scrollTo(0, this.saveY, 0)
